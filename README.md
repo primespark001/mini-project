@@ -1,7 +1,7 @@
 # Mini Game Project of Tic Tac Toe
 ---
 
-# 🎮 Advanced Tic Tac Toe
+## Description
 A modern implementation of the classic **Tic Tac Toe** game built with **HTML, CSS, and JavaScript**.
 This project features customizable avatars, multiple difficulty levels, and an AI opponent powered by the **Minimax algorithm** for unbeatable gameplay on Hard mode.
 
@@ -113,5 +113,6 @@ This project is open-source and available under the MIT License.
   <img src="images/game7.png" width="500">
   <img src="images/game8.png" width="500">
 </p>
+
 
 
