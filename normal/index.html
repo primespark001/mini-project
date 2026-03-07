@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <section class="intro">
+        <input type="radio" name="sections" id="welcome" checked>
+        <div class="texts">
+            <p>🤗</p>
+            <header>
+                <h3>Let's Play</h3>
+                <h1>Tic-Tac-Toe</h1>
+            </header>
+            <label for="start" class="button">Start</label>   
+            <a href="../advance/index.html">Play Advanced</a>           
+        </div>
+
+        <input type="radio" name="sections" id="start">
+        <div class="start">
+            <label for="welcome" class="back">⨉</label>
+            <i>--Select Mode--</i>
+            <input type="radio" name="modes" id="pvc" checked>
+            <input type="radio" name="modes" id="pvp">
+            <p class="pvc">👨~🤖</p>
+            <p class="pvp">👨~🧑🏽</p>
+            <label for="pvc" class="button">Player VS Computer</label>
+            <label for="pvp" class="button">Player VS Player</label>
+            <hr>
+            <label for="game" class="button" onclick="playGame()">Play</label>
+        </div>
+        
+        
+        <input type="radio" name="sections" id="game">
+        <div class="board">
+            <label for="start" class="back">⨉</label>
+            <p id="mode">👨~🤖</p>
+            <section class="boxes">
+                <button type="button" title="button" id="1" class="box"></button>
+                <button type="button" title="button" id="2" class="box"></button>
+                <button type="button" title="button" id="3" class="box"></button>
+                <button type="button" title="button" id="4" class="box"></button>
+                <button type="button" title="button" id="5" class="box"></button>
+                <button type="button" title="button" id="6" class="box"></button>
+                <button type="button" title="button" id="7" class="box"></button>
+                <button type="button" title="button" id="8" class="box"></button>
+                <button type="button" title="button" id="9" class="box"></button>
+            </section>
+            <h4 class="turns" id="turns">Player's Turn</h4>
+        </div>
+    </section>
+
+    <!-- Game over -->
+    <div class="gameovercover game-over"></div>
+    <div class="gameover game-over">
+        <h2>Game Over</h2>
+        <p id="icon">👨</p>
+        <b id="winner">Player Wins</b>
+        <button type="button" class="button">Play again</button>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

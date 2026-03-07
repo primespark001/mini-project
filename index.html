@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            transition: 0.3s ease;
+            box-sizing: border-box;
+            font-family: "Orbitron", monospace, sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100dvh;
+            width: 100dvw;
+            overflow: hidden;    
+            background-image: url(3d-illustration-futuristic-design-spaceship-interior.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: multiply;
+            background-color: #0f3;
+            padding: 2em;
+            gap: .5em;
+            text-align: center;
+        }
+        h2{
+            color: #ccc;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: .5em .8em;
+            background: #0005;
+            border-radius: 1em;
+            border: 1px solid #fff3;
+            font-family: monospace;
+            text-transform: uppercase;
+            span{
+                font-family: monospace;
+                color: #0f0;    
+            }
+        }
+        h1{
+            display: flex;
+            align-items: center;
+            gap: .3em;
+            color: #0f0;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: 1em;
+            background: #0005;
+            border-radius: 1em;
+            border: 1px solid #fff3;
+            span{
+                display: none;
+            }
+            hr{
+                height: 1em;
+                border: 3px solid #0f0;
+                animation: blink 0.7s linear infinite;
+            }
+        }
+        @keyframes blink {
+            0%, 45%, 100%{
+                opacity: 0;
+            }
+            50%, 95%{
+                opacity: 1;
+            }
+        }
+    </style>    
+</head>
+<body>
+    <h2>Progress: <span id="counter">0%</span></h2> 
+    <h1>
+        <span class="letter" title="15" id="1">G</span>
+        <span class="letter" title="14" id="2">A</span>
+        <span class="letter" title="13" id="3">M</span>
+        <span class="letter" title="12" id="4">E</span>
+        <span class="letter" title="11" id="5">•</span>
+        <span class="letter" title="10" id="6">L</span>
+        <span class="letter" title="9" id="7">O</span>
+        <span class="letter" title="8" id="8">A</span>
+        <span class="letter" title="7" id="9">D</span>
+        <span class="letter" title="6" id="10">I</span>
+        <span class="letter" title="5" id="11">N</span>
+        <span class="letter" title="4" id="12">G</span>
+        <span class="letter" title="3" id="13">.</span>
+        <span class="letter" title="2" id="14">.</span>
+        <span class="letter" title="1" id="15">.</span>
+        <hr>
+    </h1>  
+
+    <script>
+        const letters = document.querySelectorAll(".letter");
+        const counter = document.getElementById("counter");
+        
+        function run(){            
+            setTimeout(()=>{
+                write();
+            }, 1000);
+
+            function write(){
+                letters.forEach(letter => {
+                    let num = Number(letter.id);
+                    setTimeout(()=>{ 
+                        letter.style.display = "block";
+                    }, num*50);
+                });
+                setTimeout(()=>{erase()}, 2500);
+            }
+
+            function erase(){
+                letters.forEach(letter => {
+                    let num = Number(letter.title);
+                    setTimeout(()=>{ 
+                        letter.style.display = "none";
+                    }, num*50);
+                });
+                setTimeout(()=>{write()}, 900);
+            }
+
+            let count = 0;
+            setInterval(() => {
+                if(count < 100) {
+                    count++;
+                    counter.textContent = count + '%';
+                } else {                    
+                    count = 100;
+                }
+            }, (1000*10)/100);
+
+        }
+        run();
+        setTimeout(()=>{
+            setTimeout(()=>{
+                window.location = 'advance/index.html';
+            }, 1000*10);
+        }, 1000);
+
+    </script> 
+</body>
+</html>
