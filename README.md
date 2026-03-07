@@ -67,9 +67,10 @@ The first player to align **three symbols horizontally, vertically, or diagonall
   │    ├── style.css # UI styling
   │    └── index.js # Game logic
   └── normal/
-       ├── index.html # Game layout
-       ├── style.css # UI styling
-       └── index.js # Game logic
+  │    ├── index.html # Game layout
+  │    ├── style.css # UI styling
+  │    └── index.js # Game logic
+  └── images/
 ```
 
 ---
@@ -113,6 +114,7 @@ This project is open-source and available under the MIT License.
   <img src="images/game7.png" width="500">
   <img src="images/game8.png" width="500">
 </p>
+
 
 
 
