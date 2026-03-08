@@ -24,7 +24,7 @@ body{
     height: 100dvh;
     width: 100dvw;
     overflow: hidden;    
-    background-image: url(../3d-illustration-futuristic-design-spaceship-interior.jpg);
+    background-image: url(../bgimg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
